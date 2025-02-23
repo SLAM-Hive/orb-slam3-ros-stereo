@@ -178,7 +178,7 @@ void ImageGrabber::SyncWithImu()
       mpImuGb->mBufMutex.unlock();
       if(mbClahe)
         mClahe->apply(im,im);
-
+      cout << "imu number: "<< vImuMeas.size() <<endl;
       mpSLAM->TrackMonocular(im,tIm,vImuMeas);
     }
 
